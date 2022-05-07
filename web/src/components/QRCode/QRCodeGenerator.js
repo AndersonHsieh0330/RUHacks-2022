@@ -11,3 +11,5 @@ const QRCodeGenerator = (props) => {
         </div>
     )
 }
+
+export default QRCodeGenerator;
