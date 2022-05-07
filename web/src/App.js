@@ -28,7 +28,6 @@ const INITIAL_METHODS = [
 
 function App() {
   const [methods,setMethods] = useState(INITIAL_METHODS);
-  const [name, setName] = useState('Fried Chicken');
   const addMethodHandler = (newMethodData) =>{
     setMethods((prevMethods)=>{
        return [...methods,newMethodData];
@@ -44,7 +43,7 @@ function App() {
   
   return (
     <div>
-   <Recipe methods={methods} deleteMethod={deleteMethodHandler} recipeName={name}/>
+   <Recipe methods={methods} deleteMethod={deleteMethodHandler} />
    <NewMethod onAddMethod={addMethodHandler}/>
 
     </div>
