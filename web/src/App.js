@@ -46,7 +46,6 @@ function App() {
   const OS_PROJECT_ID = "95786b59-0362-4afb-a909-33a641fc8a53";
   const [accessToken, editAccessToken] = useState("")
   const [methods,setMethods] = useState(INITIAL_METHODS);
-  const [name, setName] = useState('Fried Chicken');
   const addMethodHandler = (newMethodData) =>{
     setMethods((prevMethods)=>{
        return [...methods,newMethodData];
@@ -62,7 +61,7 @@ function App() {
   
   return (
     <div>
-   <Recipe methods={methods} deleteMethod={deleteMethodHandler} recipeName={name}/>
+   <Recipe methods={methods} deleteMethod={deleteMethodHandler} />
    <NewMethod onAddMethod={addMethodHandler}/>
    <QRCodeGenerator/>
     <></>
