@@ -13,7 +13,7 @@ async function main(){
     name: 'Hello World',
     qrCodes: [
       {
-        intent: 'https://openscreen.com/',
+        intent: 'https://google.ca',
         intentType: 'DYNAMIC_REDIRECT'
       }
     ]
@@ -26,8 +26,15 @@ async function main(){
   const { qrCodeId } = asset.asset.qrCodes[0];
 
   // Returns a scannable QR Code and saves the png file in your project folder
-  const qrCode = await os.qrCode(qrCodeId).get({format:'png', dataUrl: true}); 
-  await os.saveQrImageDataToFile(qrCode, 'my-first-qr-code.png');
+  const qrCode = await os.qrCode(qrCodeId).get({
+    format:'png',
+    margin: 5, 
+    scale: 8,
+    foreground: '#0A74B7',
+    background: '#D3D3D3',
+    dataUrl: true}); 
+
+  await os.saveQrImageDataToFile(qrCode, 'stylishQRCode.png');
 
   // Returns the Openscreen qrCode object 
   console.log("QR Code:", JSON.stringify(qrCode, '',2));
