@@ -1,5 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+// Gives us access to variables set in the .env file via `process.env.VARIABLE_NAME` syntax
+require('dotenv').config();
 const app = express()
 const port = 3000
 let routes = require('./routes');
