@@ -1,8 +1,9 @@
 import CookingMethod from './CookingMethod';
 import styles from './CookingMethodsList.module.css';
 const CookingMethodList = (props) =>{
-
-  
+    const deleteMethodHandler = (methodId) =>{
+        props.deleteMethod(methodId)
+    }
 
     // let expenseContent = <p>No Expenses Found</p>;
 
@@ -11,15 +12,19 @@ const CookingMethodList = (props) =>{
    }
 
     return(
+        
         <ul className={`${styles['method-list']}`}>
         {props.methods.map((method) => (
         <CookingMethod
+          id = {method.id}
           key = {method.id}
           title={method.name}
           ingredients={method.ingredients}
+          onDeleteMethod={deleteMethodHandler}
         />
       ))}
         </ul>
+       
     )
 
 }

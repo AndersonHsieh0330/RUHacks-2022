@@ -4,7 +4,7 @@ import Button from '../UI/Button';
 const CookingMethod = props =>{
 
     const clickHandler = (event) => {
-        console.log('clicked')
+       
         props.onDeleteMethod(props.id);
       };
 return(  
