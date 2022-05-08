@@ -4,9 +4,10 @@
     padding: 0.5rem 1.5rem;
     border: 1px solid black;
     color: black;
-    background: #f3d8c7;
+    background: #efe5dc;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
     cursor: pointer;
+    border-radius: 12px;
   }
   
   .button:focus {
@@ -15,7 +16,7 @@
   
   .button:hover,
   .button:active {
-    background: #efe5dc;
+    background: #FFFFFF;
     border-color: black;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }

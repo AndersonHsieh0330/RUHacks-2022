@@ -43,6 +43,7 @@ const QRCodeGenerator = (props) => {
             <Button className = "QRCodeGenerateBTN" onClick={postRecipeToDB}>
                 Save/Generate QR Code
             </Button>
+            <br/>
             <img className = "QRCodeImg"src ={qrUrl} />
         </div>
     )

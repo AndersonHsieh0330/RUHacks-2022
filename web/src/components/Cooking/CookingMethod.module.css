@@ -4,7 +4,7 @@
     align-items: center;
     padding: 0.5rem;
     margin: 1rem 0;
-    background-color: #f3d8c7;
+    background-color: #75C9B7;
   }
   
   .cookingmethod-item__description {
@@ -24,14 +24,15 @@
     margin: 0 1rem;
     color: black;
     display: inline-block;
+
   }
   
   .cookingmethod-item__ingredients{
     font-size: 1rem;
     font-weight: bold;
     color: black;
-    background-color: #f3d8c7;
-    border: 2px solid black;
+    background-color: #C7DDCC;
+    border: 1px solid black;
     padding: 0.5rem;
     margin:0.5rem;
     border-radius: 12px;
