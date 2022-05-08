@@ -66,11 +66,15 @@ const Layout = (props) => {
       return methods.filter(method=>method.id!=methodId);
     })
   }
+
+  const recipeNameHandler = (recipeName) =>{
+    setRecipeName(recipeName);
+  }
   return (
     <div>
-      <Recipe methods={methods} recipe={recipeName} deleteMethod={deleteMethodHandler} />
+      <Recipe methods={methods} recipe={recipeName} deleteMethod={deleteMethodHandler} recipeNameHandler= {recipeNameHandler} />
       <NewMethod onAddMethod={addMethodHandler}/>
-      <QRCodeGenerator/>
+      <QRCodeGenerator methods={methods} recipe={recipeName}/>
       
     </div>
   );

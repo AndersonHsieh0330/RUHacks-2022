@@ -9,6 +9,10 @@ const Recipe = (props) => {
   const [print, setPrint] = useState(false);
   const [isLoaded,setIsLoaded] = useState(false);
   
+
+  const recipeNameChange = (recipeName) =>{
+    props.recipeNameHandler(recipeName)
+}
   if(props.recipe!='' && !isLoaded){
     setRecipe(props.recipe);
     setIsLoaded(true);
@@ -16,6 +20,7 @@ const Recipe = (props) => {
   }
   function getRecipe(val) {
     setRecipe(val.target.value);
+    recipeNameChange(val.target.value);
     setPrint(false);
     console.warn(val.target.value);
   }

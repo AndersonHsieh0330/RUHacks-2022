@@ -32,7 +32,7 @@ router.get('/:id', async(req, res, next) => {
 
 router.post('/',async(req,res,next)=>{
 
-    const cooking_methods_request = req.body.cooking_methods;
+   
     const recipe = await Recipe.create({
         recipe_name: req.body.recipe_name,
         cooking_methods:req.body.cooking_methods
@@ -41,18 +41,18 @@ router.post('/',async(req,res,next)=>{
         _id:recipe._id.toString()
     }
     res.header("Access-Control-Allow-Origin", "*");
-
     res.send(id);
 })
 
 
 router.post('/generateQRCode', async(req,res,next)=>{
+    console.log(req.body)
     const OS_API_KEY = "FybBxfdAZ9tshVCkr2";
   const OS_API_SECRET = "i0rMx21izP3OGslQ5k8iwSYd";
   const OS_PROJECT_ID = "95786b59-0362-4afb-a909-33a641fc8a53";
     const currentRecipeID = req.body.currentRecipeID;
     const recipeName = req.body.recipeName;
-
+    
   axios({
     method: "POST",
     url:"https://kbdgsb6g57.execute-api.us-east-1.amazonaws.com/prod/projects/95786b59-0362-4afb-a909-33a641fc8a53/assets",
