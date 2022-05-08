@@ -15,6 +15,7 @@ const CookingMethodSchema = new mongoose.Schema({
     ingredients:String,
 })
 const RecipeSchema = new mongoose.Schema({
+    recipe_name:String,
     cooking_methods: [{type:CookingMethodSchema}],
 });
 

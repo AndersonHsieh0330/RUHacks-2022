@@ -22,7 +22,8 @@ router.get('/:id', async(req, res, next) => {
     }catch(err){
         console.log(err.message);
         res.header("Access-Control-Allow-Origin", "*");
-        res.send('')
+        res.status(404).send('')
+    
     }
 });
 
@@ -30,6 +31,7 @@ router.post('/',async(req,res,next)=>{
 
     const cooking_methods_request = req.body.cooking_methods;
     const recipe = await Recipe.create({
+        recipe_name: req.body.recipe_name,
         cooking_methods:req.body.cooking_methods
     })
     const id = {
