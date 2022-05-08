@@ -72,6 +72,7 @@ router.post('/generateQRCode', async(req,res,next)=>{
 .then(res => {
     console.log(res.data.asset.assetId);
     const assetID = res.data.asset.assetId;
+    //https://kbdgsb6g57.execute-api.us-east-1.amazonaws.com/prod/assets/4d0a3a5d-5f78-4da8-90e2-063dc961b6ea/qrcodes
     const url = "https://kbdgsb6g57.execute-api.us-east-1.amazonaws.com/prod/assets/"+assetID+"/qrcodes";
     axios({
         method: "GET",
