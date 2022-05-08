@@ -1,6 +1,7 @@
 import Button from "../UI/Button"
 import axios from "axios"
 import { useState } from "react"
+import "./QRCodeGenerator.css";
 
 const QRCodeGenerator = (props) => {
     const [qrUrl,setQrUrl] = useState('');

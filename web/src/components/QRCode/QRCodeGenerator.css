@@ -1,9 +1,8 @@
 .QRCodeImg{
-    width: 20vh;
-    height: 20vh;
+   
+    margin-top: 25px;
 }
 
 .QRCodeGenerateBTN{
-    width: 20vh;
-    height: 10vh;
+    
 }
