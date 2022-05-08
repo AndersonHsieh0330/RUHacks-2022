@@ -19,12 +19,14 @@
     border-radius: 12px;
     margin-right: 1rem;
     weight:bold;
+    margin-right: 180px;
+    width:50%;
   }
   
   .new-method button:hover,
   .new-method button:active {
     background-color: #efe5dc;
-    border-color: #black;
+    border-color: black;
   }
   
   .new-method button.alternative {
@@ -37,10 +39,6 @@
   .new-method button.alternative:active {
     background-color: #ddb3f8;
   }
-
-
-
-
   .new-method__controls {
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +51,8 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+    text-align: center;
+
   }
   
   .new-method__control input {
@@ -62,8 +62,26 @@
     border: 1px solid #ccc;
     width: 20rem;
     max-width: 100%;
+    margin-left: 40px;
   }
   
   .new-method__actions {
     text-align: right;
+  }
+
+  @media only screen and (max-width: 809px) {
+
+    .new-method button{
+      width:100%
+    }
+    .new-method__control input  {
+      width: 100%;
+      margin: 1rem;
+      
+      
+    }
+
+    .new-method{
+      margin: 3rem;
+    }
   }
