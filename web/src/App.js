@@ -2,6 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Layout from './components/layout/Layout.js';
+import { useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
 
 
 // function GetAccessToken(OS_API_KEY, OS_API_SECRET){
@@ -18,41 +26,51 @@ import Layout from './components/layout/Layout.js';
 //   return ;
 // } 
 
-class App extends React.Component{
-  
-  constructor(props){
-    super(props);
-    this.state = {
-      recipe: [],
-      isLoaded:false
-    };
-  };
+function App() {
 
-  componentDidMount(){
-    fetch('http://localhost:3001/6276d9f0be4b8f3c23f9f427')
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-        })
-      });
-  }
+  return(
+    <Router>
+      <div className = "App">
+      <Routes>
+        <Route path = "/" element={<Layout />} />
+        <Route path = "/:id" element={<Layout />} />
+      </Routes>
+      </div>
+    </Router>
+  )
+//   constructor(props){
+//     super(props);
+//     this.state = {
+//       recipe: [],
+//       isLoaded:false
+//     };
+//   };
 
-  render(){
-    var {isLoaded,items}=this.state;
+//   componentDidMount(){
+//     fetch('http://localhost:3001/6276d9f0be4b8f3c23f9f427')
+//       .then(res => res.json())
+//       .then(json => {
+//         this.setState({
+//           isLoaded: true,
+//           items: json,
+//         })
+//       });
+//   }
 
-    if(!isLoaded){
-      return <div>Loading...</div>;
-    }
-    else{
-      return(
-        <div className='App'>
-          <Layout data={this.state}/>
-        </div>
-      );
-    }
-  }
+//   render(){
+//     var {isLoaded,items}=this.state;
+
+//     if(!isLoaded){
+//       return <div>Loading...</div>;
+//     }
+//     else{
+//       return(
+//         <div className='App'>
+//           <Layout data={this.state}/>
+//         </div>
+//       );
+//     }
+//   }
+// }
 }
-
 export default App;
