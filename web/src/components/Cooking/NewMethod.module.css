@@ -1,5 +1,5 @@
 .new-method {
-    background-color: #a892ee;
+    background-color: #d0b8ac;
     padding: 1rem;
     margin: 2rem auto;
     width: 50rem;
@@ -13,17 +13,18 @@
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
+    border: 1px solid black;
+    background-color: #f3d8c7;
+    color: black;
     border-radius: 12px;
     margin-right: 1rem;
+    weight:bold;
   }
   
   .new-method button:hover,
   .new-method button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: #efe5dc;
+    border-color: #black;
   }
   
   .new-method button.alternative {
