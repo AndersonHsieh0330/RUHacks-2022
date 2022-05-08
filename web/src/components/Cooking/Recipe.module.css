@@ -1,0 +1,12 @@
+.recipe {
+    padding: 1rem;
+    background-color: #FFE26A;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    color:black;
+    
+  }
+  .recipe h1{
+    text-align: center;
+  }

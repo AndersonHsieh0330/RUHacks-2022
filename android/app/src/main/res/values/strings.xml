@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QRecipe</string>
+    <string name="ingredients_description">Add Ingredients</string>
+    <string name="cookingmethod_description">Add Methods</string>
+
+
+
+
+</resources>

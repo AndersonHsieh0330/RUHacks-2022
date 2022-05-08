@@ -1,0 +1,17 @@
+.method-list {
+    list-style: none;
+    padding: 0;
+    padding: 1rem;
+    background-color: #ABD699;
+    border-radius: 12px;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+  }
+  
+  .method-list__fallback {
+    color: black;
+    text-align: center;
+  }
+
+ 

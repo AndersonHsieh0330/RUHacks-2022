@@ -1,0 +1,57 @@
+.cookingmethod-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #75C9B7;
+  }
+  
+  .cookingmethod-item__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  .cookingmethod-item h2 {
+    color: black;
+    font-size: 1rem;
+    flex: 1;
+    margin: 0 1rem;
+    color: black;
+    display: inline-block;
+
+  }
+  
+  .cookingmethod-item__ingredients{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background-color: #C7DDCC;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin:0.5rem;
+    border-radius: 12px;
+  }
+  
+  @media (min-width: 580px) {
+    .cookingmethod-item__description {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+    }
+  
+    .cookingmethod-item__description h2 {
+      font-size: 1.25rem;
+    }
+  
+    .cookingmethod-item__ingredients {
+      font-size: 1.25rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
