@@ -18,7 +18,7 @@ const CookingMethodList = (props) =>{
         <CookingMethod
           id = {method.id}
           key = {method.id}
-          title={method.name}
+          title={method.method_name}
           ingredients={method.ingredients}
           onDeleteMethod={deleteMethodHandler}
         />

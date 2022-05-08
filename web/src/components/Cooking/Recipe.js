@@ -4,9 +4,16 @@ import Card from "../UI/Card";
 import { useState } from "react";
 
 const Recipe = (props) => {
-  const [name, setName] = useState("Fried Chicken");
-  const [recipe, setRecipe] = useState(null);
+  
+  const [recipe, setRecipe] = useState('');
   const [print, setPrint] = useState(false);
+  const [isLoaded,setIsLoaded] = useState(false);
+  
+  if(props.recipe!='' && !isLoaded){
+    setRecipe(props.recipe);
+    setIsLoaded(true);
+    setPrint(true)
+  }
   function getRecipe(val) {
     setRecipe(val.target.value);
     setPrint(false);
@@ -39,9 +46,11 @@ const Recipe = (props) => {
         >
           Create Recipe
         </button>
-        {print ? <h1>{recipe}</h1> : null}
+       
       </div>
+     
       <Card className={`${styles["recipe"]}`}>
+      {print ? <h1 >{recipe}</h1> : null}
         <CookingMethodList
           methods={props.methods}
           deleteMethod={props.deleteMethod}

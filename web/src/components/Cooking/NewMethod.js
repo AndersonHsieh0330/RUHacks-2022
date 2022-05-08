@@ -22,7 +22,7 @@ const NewMethod = (props) => {
   const submitHandler = (event) =>{
     event.preventDefault();
     const methodData = {
-      name:enteredMethod,
+      method_name:enteredMethod,
       ingredients:enteredIngredients,
       id: Math.random().toString()
     }

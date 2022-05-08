@@ -33,6 +33,7 @@ const Layout = (props) => {
   const OS_PROJECT_ID = "95786b59-0362-4afb-a909-33a641fc8a53";
   const [accessToken, editAccessToken] = useState("");
   const [methods,setMethods] = useState([]);
+  const [recipeName,setRecipeName] = useState('')
   const [id,setID] = useState('');
   const [isLoaded,setIsLoaded] = useState(false);
   
@@ -43,10 +44,11 @@ const Layout = (props) => {
       console.log(url);
       axios.get(url)
       .then((res)=>{
-        console.log(res.data);
+        setMethods(res.data.cooking_methods);
+        setRecipeName(res.data.recipe_name);
       })
       .catch((err)=>{
-        
+        setRecipeName('No Recipe Found')
       })
       setIsLoaded(true);
   }
@@ -66,8 +68,7 @@ const Layout = (props) => {
   }
   return (
     <div>
-      <h1>{`${id}`}</h1>
-      <Recipe methods={methods} deleteMethod={deleteMethodHandler} />
+      <Recipe methods={methods} recipe={recipeName} deleteMethod={deleteMethodHandler} />
       <NewMethod onAddMethod={addMethodHandler}/>
       <QRCodeGenerator/>
       
