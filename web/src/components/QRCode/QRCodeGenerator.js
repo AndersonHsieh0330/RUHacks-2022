@@ -1,8 +1,9 @@
 import Button from "../UI/Button"
 
 
+
 const QRCodeGenerator = (props) => {
-    const getQRCode = () => {}
+    
 
     return (
         <div>
