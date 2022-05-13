@@ -12,3 +12,5 @@ then you can call npm run devStart and you're good to go. **Note: in our .env fi
 
 
 **Authors : Sahil Hakimi, Anderson Hsieh, Mohammed Hamza, Manar Alchirazi Alsabbagh **
+
+**Devpost :** https://devpost.com/software/qrecipe
